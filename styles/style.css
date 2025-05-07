@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --primary-color: #6750A4;
+  --default-bg-color: #FFFFFF;
+  --primary-container-color: #EADDFF;
+  --primary-container-on-color: #21005D;
+  --primary-click-color: #D0BCFF;
+  --medium-grey-color: #79747E;
+  /* --neutral-dark-light-grey-color: #CAC4D0; */
+  --primary-font-family: "Roboto", sans-serif;
+
+}
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--default-bg-color);
+}
+
+/* Estilos da seção Hero */
+.hero {
+  position: relative; /* Position para criar contexto de posicionamento (ex.: overlay) */
+  width: 100%;
+  min-height: 500px;
+  background-image: url('../assets/banner-homepage-fundo.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--default-bg-color);
+  padding: 40px 20%;
+  overflow: hidden; /* Evita que elementos transborde o container da seção Hero */
+}
+
+/* Cria overlay escuro para melhorar a legibilidade */
+/* .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+} */
+
+.hero__content {
+  /* Flexbox para organizar o conteúdo interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero__text {
+  color: var(--default-bg-color);
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1.2;
+}
+
+.hero__text span {
+  font-weight: 700;
+}
+
+
+/* Estilos da seção Busca */
+.search {
+  max-width: 1049px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f5f5f5;
+  border-radius: 16px;
+}
+
+.search__title {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.25;
+  margin-bottom: 32px;
+  color: #000;
+}
+
+.search__form {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.search__input {
+  flex: 1;
+  width: 100%;
+  padding: 15px 40px;
+  border: 1px solid var(--medium-grey-color);
+  border-radius: 4px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.0025em;
+  outline: none;
+}
+
+.search__input:focus {
+  border-color: var(--primary-container-on-color);
+}
+
+.search__button {  
+  background-color: var(--primary-color);
+  color: var(--default-bg-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.search__button:hover {
+  background-color: var(--primary-click-color);
+}
+
+/* Icone de Busca */
+.search__icon {
+  position: relative;
+  flex: 1;
+}
+
+.search__icon::after {
+  content: "";
+  /* Posicionamento do ícone */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Dimensão do ícone */
+  width: 20px;
+  height: 20px;
+  /* Definição da imagem SVG inline */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  /* Propriedades adicionais da imagem */
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+/* Estilos da seção Destinos */
+.destinations__container {
+  max-width: 1049px;
+  margin: 40px auto;
+}
+
+.destinations__title {
+   font-family: var(--primary-font-family);
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 1.25;
+   margin: 0 0 16px 24px;
+}
+
+.destinations__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  justify-content: center;
+}
+
+.destination__card {
+  background-color: var(--primary-container-color);
+  height: 480px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.destination__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.destination__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.destination__info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  padding: 16px;
+}
+
+.destination__name {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: #1D1B20;
+  line-height: 1.33;
+}
+
+.destination__price {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 32px;
+  color: #49454F;
+  line-height: 1.25;
+}
+
+.destination__link {
+  background-color: var(--primary-color);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--default-bg-color);
+  text-decoration: none;
+}
+
+.destination__link:hover {
+  background-color: var(--primary-click-color);
+}
+
