@@ -125,6 +125,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
+  transition: background-color 0.3s;
   cursor: pointer;
   outline: none;
 }
@@ -159,7 +160,7 @@ body {
 
 /* Estilos da seção Destinos */
 .destinations__container {
-  max-width: 1049px;
+  max-width: 1000px;
   margin: 40px auto;
 }
 
@@ -168,22 +169,30 @@ body {
    font-weight: 400;
    font-size: 32px;
    line-height: 1.25;
-   margin: 0 0 16px 24px;
+   margin-bottom: 16px;
 }
 
-.destinations__grid {
+/* Alternativa para o Grid com Flexbox */
+/* .destinations__grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 24px;
   justify-content: center;
+} */
+
+.destinations__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  minmax(317px, 1fr));
+  gap: 10px 24px;
 }
 
 .destination__card {
-  background-color: var(--primary-container-color);
   height: 480px;
+  background-color: var(--primary-container-color);
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .destination__card:hover {
@@ -232,6 +241,7 @@ body {
   line-height: 1.4;
   color: var(--default-bg-color);
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .destination__link:hover {
