@@ -355,3 +355,13 @@ body {
   line-height: 1.5;
   color: var(--neutral-dark-black-color);
 }
+
+.homepage__bottom {
+  width: 100%;
+  min-height: 500px;
+  background-image: url('../assets/banner2-homepage-fundo.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: var(--neutral-light-white-color);
+}
