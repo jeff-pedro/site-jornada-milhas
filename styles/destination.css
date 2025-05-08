@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --primary-click-color: #D0BCFF;
+  --primary-font-family: "Roboto", sans-serif;
+}
+
+.header__destination_links {
+  display: flex;
+  gap: 40px;
+  margin-right: 40px;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: var(--primary-click-color);
+}
+
+.header__btn__sair {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--neutral-dark-medium-grey-color);
+}
+
+.header__btn__sair:hover {
+  background-color: var(--primary-click-color);
+}
+
+.destination__banner {
+  width: 100%;
+  min-height: 100px;
+  background-image: url('../assets/banner-destino.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+
+.destination__content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20%;
+  justify-content: center;
+  gap: 24px;
+}
+
+.destination__title {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.destination__subtitle {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.destination__content__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.destination__text {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+
+
+
