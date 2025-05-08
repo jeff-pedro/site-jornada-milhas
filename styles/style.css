@@ -2,13 +2,18 @@
 
 :root {
   --primary-color: #6750A4;
-  --default-bg-color: #FFFFFF;
   --primary-container-color: #EADDFF;
   --primary-container-on-color: #21005D;
   --primary-click-color: #D0BCFF;
+  
+  --neutral-dark-black-color: #1D1B20;
+  --neutral-dark-grey-color: #49454F;
+  --neutral-dark-medium-grey-color: #79747E;
+  --neutral-dark-light-grey-color: #CAC4D0;
+  
+  --neutral-light-white-color: #FFFFFF;
   --neutral-light-surface1-color: #F7F2FA;
-  /* --neutral-dark-light-grey-color: #CAC4D0; */
-  --medium-grey-color: #79747E;
+  
   --primary-font-family: "Roboto", sans-serif;
 
 }
@@ -22,7 +27,57 @@
 }
 
 body {
-  background-color: var(--default-bg-color);
+  background-color: var(--neutral-light-white-color);
+}
+
+/* Eslilos do Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--neutral-dark-black-color);
+  width: 100%;
+  padding: 16px 20%;
+}
+
+.header__buttons__container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__btn {
+  padding: 8px 24px;
+  border-radius: 5px;
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+
+}
+
+.header__btn__cadastro {
+  background-color: var(--primary-color);
+  color: var(--neutral-light-white-color);
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.header__btn__cadastro:hover {
+  background-color: var(--primary-click-color);
+}
+
+.header__btn__login {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--neutral-dark-medium-grey-color);
+}
+
+.header__btn__login:hover {
+  background-color: var(--primary-click-color);
 }
 
 /* Estilos da seção Hero */
@@ -33,7 +88,7 @@ body {
   background-image: url('../assets/banner-homepage-fundo.png');
   background-size: cover;
   background-position: center;
-  color: var(--default-bg-color);
+  color: var(--neutral-light-white-color);
   padding: 40px 20%;
   overflow: hidden; /* Evita que elementos transborde o container da seção Hero */
 }
@@ -59,7 +114,7 @@ body {
 }
 
 .hero__text {
-  color: var(--default-bg-color);
+  color: var(--neutral-light-white-color);
   font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 45px;
@@ -69,7 +124,6 @@ body {
 .hero__text span {
   font-weight: 700;
 }
-
 
 /* Estilos da seção Busca */
 .search {
@@ -100,7 +154,7 @@ body {
   flex: 1;
   width: 100%;
   padding: 15px 40px;
-  border: 1px solid var(--medium-grey-color);
+  border: 1px solid var(--neutral-dark-medium-grey-color);
   border-radius: 4px;
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.05);
   background-color: #f5f5f5;
@@ -117,7 +171,7 @@ body {
 
 .search__button {  
   background-color: var(--primary-color);
-  color: var(--default-bg-color);
+  color: var(--neutral-light-white-color);
   border: none;
   border-radius: 5px;
   padding: 10px 30px;
@@ -191,9 +245,10 @@ body {
   background-color: var(--neutral-light-surface1-color);
   height: 480px;
   border-radius: 12px;
-  border: 1px solid #CAC4D0;
+  border: 1px solid var(--neutral-dark-light-grey-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
 .destination__card:hover {
@@ -220,7 +275,7 @@ body {
   font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 24px;
-  color: #1D1B20;
+  color: var(--neutral-dark-black-color);
   line-height: 1.33;
 }
 
@@ -228,7 +283,7 @@ body {
   font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 32px;
-  color: #49454F;
+  color: var(--neutral-dark-grey-color);
   line-height: 1.25;
 }
 
@@ -240,7 +295,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
-  color: var(--default-bg-color);
+  color: var(--neutral-light-white-color);
   text-decoration: none;
   transition: background-color 0.3s;
 }
@@ -286,7 +341,7 @@ body {
 }
 
 .testimonial_text {
-  color: #49454F;
+  color: var(--neutral-dark-grey-color);
   font-family: var(--primary-font-family);
   font-weight: 400;
   font-size: 16px;
@@ -298,5 +353,5 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #1D1B20;
+  color: var(--neutral-dark-black-color);
 }
