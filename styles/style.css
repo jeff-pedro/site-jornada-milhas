@@ -225,9 +225,12 @@ body {
 }
 
 /* Estilos da seção Destinos */
+.destinations {
+ padding: 1.5% 20%; 
+}
+
 .destinations__container {
-  max-width: 1000px;
-  margin: 40px auto;
+  width: 100%;
 }
 
 .destinations__title {
@@ -467,4 +470,10 @@ body {
   .search {
     padding: 0% 10%;
   }
+
+  .destinations {
+    padding: 1.5% 10%; 
+  }
+
+  
 }
