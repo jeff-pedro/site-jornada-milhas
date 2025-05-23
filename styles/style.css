@@ -377,7 +377,7 @@ body {
   width: 100%;
   min-height: 500px;
   background-image: url('../assets/banner2-homepage-fundo.png');
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100% auto;
   color: var(--neutral-light-white-color);
@@ -386,7 +386,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 60px 20%;
+  padding: 2% 20%;
   background-color: var(--neutral-dark-black-color);
 }
 
